@@ -12,7 +12,4 @@ let sess = {
     }),
 };
 
-sequelize.sync({ force: false });
-console.log('db is connected')
-
 module.exports = sess;

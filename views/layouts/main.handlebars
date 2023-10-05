@@ -5,12 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="/js/nav.js" defer></script>
 </head>
 
 <body>
     <main>
+        <header>
+            <nav>
+                <button id="home" href="/">Home</button>
+                <button id="dashboard" href="/dashboard">Dashboard</button>
+                {{#if loggedIn}}
+                <button id="logout">Logout</button>
+                {{else}}
+                <button id="login" href="/login">Login</button>
+                {{/if}}
+            </nav>
+            <h1>The Tech Blog</h1>
+        </header>
         {{{ body }}}
     </main>
+    
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
