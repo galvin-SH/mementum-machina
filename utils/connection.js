@@ -17,7 +17,4 @@ if (process.env.JSAWSDB_URL) {
     );
 };
 
-sequelize.sync({ force: false });
-console.log('db is connected!')
-
 module.exports = sequelize;
