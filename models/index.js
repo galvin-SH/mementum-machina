@@ -1,12 +1,12 @@
 const BlogPost = require('./BlogPost');
 const User = require('./User');
 
-// User.hasMany(BlogPost, {
-//     foreignKey: 'author',
-// });
+User.hasMany(BlogPost, {
+    foreignKey: 'author_id',
+});
 
-// BlogPost.hasOne(User, {
-//     foreignKey: 'author',
-// });
+BlogPost.belongsTo(User, {
+    foreignKey: 'author_id',
+});
 
 module.exports = { BlogPost, User };

@@ -22,13 +22,13 @@ BlogPost.init(
                 notNull: true,
             },
         },
-        // author: {
-        //     type: DataTypes.STRING,
-        //     references: {
-        //         model: 'user',
-        //         key: 'id',
-        //     },
-        // },
+        author_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,

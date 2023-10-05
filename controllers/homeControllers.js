@@ -3,7 +3,9 @@ const { BlogPost, User } = require('../models');
 module.exports = {
     renderHomePage: async function (req, res) {
         try {
-            const dbBlogPosts = await BlogPost.findAll();
+            const dbBlogPosts = await BlogPost.findAll({
+                include: [{ model: User, attributes: ['username'] }]
+            });
             const blogPosts = dbBlogPosts.map((blogPost) => {
                 return blogPost.get({ plain: true })
             })
