@@ -18,11 +18,17 @@ module.exports = {
     renderDashboard: async function (req, res) {
         try {
             res.render('dashboard');
-        } catch (error) { console.error(error) };
+        } catch (error) {
+            console.error(error);
+            res.status(500).json(error);
+        };
     },
     renderLoginPage: async function (req, res) {
         try {
             res.render('login');
-        } catch (error) { console.error(error) };
+        } catch (error) {
+            console.error(error);
+            res.status(500).json(error);
+        };
     }
 }
