@@ -5,7 +5,6 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
-
 // Include other modules
 const routes = require('./routes');
 const sess = require('./utils/session');
