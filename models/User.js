@@ -3,14 +3,14 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
 // import sequelize connection
-const sequelize = require('../utils/connection')
+const sequelize = require('../utils/connection');
 
 class User extends Model {
     // Instance methods
     checkPassword(submittedPassword) {
         return bcrypt.compareSync(submittedPassword, this.password);
     }
-};
+}
 
 User.init(
     {
@@ -41,7 +41,7 @@ User.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'user',
     }
 );
 

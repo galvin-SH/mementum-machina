@@ -9,7 +9,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./routes');
 const sess = require('./utils/session');
 const helpers = require('./utils/helpers');
-const sequelize = require('./utils/connection')
+const sequelize = require('./utils/connection');
 
 // Set up middleware
 const app = express();
@@ -23,6 +23,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules/flowbite/dist')));
 
 app.use(session(sess));
 
@@ -30,7 +31,7 @@ app.use(routes);
 
 async function start() {
     await sequelize.sync({ force: false });
-    console.log('db is connected!')
+    console.log('db is connected!');
     app.listen(PORT, () => {
         console.log(`App listening on port ${PORT}!`);
     });

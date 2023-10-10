@@ -5,7 +5,9 @@ const withAuth = (req, res, next) => {
         console.log('\nUser not logged in');
         console.log('Redirecting user to login page\n');
         res.redirect('/login');
-    } else { next()};
+    } else {
+        next();
+    }
 };
 
 module.exports = withAuth;
