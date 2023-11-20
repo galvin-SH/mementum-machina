@@ -1,7 +1,10 @@
-<section class='card'>
-    <div>
-        <h3>{{title}}</h3>
-        <p>Posted by {{user.username}} on {{createdAt}}</p>
-    </div>
-    <p>{{content}}</p>
-</section>
+<div class="text-left border-gray-600 shadow-lg m-4">
+    <h3 class="fs-3 font-extrabold">{{title}}</h3>
+    <ol>
+        <li>{{content}}</li>
+        <li class="font-extralight">Posted by
+            {{user.username}}
+            on
+            {{formatTimeStamp createdAt}}</li>
+    </ol>
+</div>

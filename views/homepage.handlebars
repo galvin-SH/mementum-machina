@@ -1,5 +1,9 @@
+<div class='flex flex-col items-center min-h-screen py-2'>
 <h2>homepage body</h2>
 <h3>there are {{blogPosts.length}} posts to show</h3>
+<ol class="bg-slate-100 m-4 p-4 ">
 {{#each blogPosts as |feed|}}
 {{> post-details}}
 {{/each}}
+</ol>
+</div>
