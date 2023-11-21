@@ -45,7 +45,4 @@ This project does not currently implement any test functionality
 
 ## Questions
 
-If you have any questions or concerns regarding this project, I can be contacted via email at the following address
-
-Additionally my github profile can be located by using the following link
-https://github.com/galvin-sh
+If you have any questions or concerns regarding this project, my github profile can be located [here](https://github.com/galvin-sh)
